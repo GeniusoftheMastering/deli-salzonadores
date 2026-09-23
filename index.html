@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head> <!-- AQUÍ VIENE LOS METADATOS Y LA CONEXIÓN al style.css-->
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Marcus Villarreal">
+  <meta name="description" content="Es un diseño de un carrito de compras para mi e-commerce de venta de sazonadores y salsas de chile de árbol">
+  <meta name="keywords" content="Salsa de chile de árbol, sazonador, salsa picante, sazonador gourmet">
+<!--Es el título  de la Página Web-->
+  <title>Carrito de Compras - Deli-Salzonadores</title>
+<!--Enlaza con la hoja de estilos-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+
+</head>
+
+<body class="paper-texture">
+
+<header class="site-header">
+    <div class="container header-inner">
+    <a href="#inicio" class="logo">
+    <img src="img/delisalzonadoresgourmetnatural.png" alt="Logo Deli-Salzonadores">
+       <!-- <span class="logo-icon">🌶️</span>-->
+        Deli-Salzonadores
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Quienes Somos</a></li>
+          <li><a href="#beneficios">Nuestros Productos</a></li>
+          <li><a href="#oferta">Recetas</a></li>
+          <li><a href="#contacto">Redes Sociales</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-nav">
+
+    <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Quienes Somos</a></li>
+          <li><a href="#beneficios">Nuestros Productos</a></li>
+          <li><a href="#oferta">Recetas</a></li>
+          <li><a href="#contacto">Redes Sociales</a></li>
+        </ul>
+
+         <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+        <i data-lucide="message-circle"></i> Pedir ahora
+      </button>
+
+      </nav>
+
+    </header>
+
+<main>
+
+
+ <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Producto Nuevo</p>
+          <h1>Tenemos una nueva salsa que sabe a Taquería Mexicana</h1>
+          <p class="lead">Inspirada en la tradición mexicana, esta salsa combina chiles seleccionados, ajo fresco y un toque cítrico de limón para realzar el sabor auténtico de los tacos al pastor. Su textura suave y picor equilibrado aportan un acabado gourmet que transforma cada bocado en una experiencia deliciosa.. </p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Más de 5,000 productos vendidos</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/salsaparatacospastor.png" alt="Imágen salsa pastor">
+          <span class="tag tag-love">Salsa roja para tacos al pastor</span>
+          <span class="tag tag-custom">Salsas y sazonadores</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sabores Gourmet de México</p>
+          <h2>Conoce nuestros productos</h2>
+          <p class="lead">Elige una salsa o sazonador para realzar tu comida con un sabor casero.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/salsa.jpeg" alt="Salsa Original">
+            <div class="product-body">
+              <span class="tag">Sabor Original</span>
+              <h3>Salza de chile de árbol y frutos secos</h3>
+              <p class="price">$150 MXN</p>
+              <p class="description">Una salsa artesanal elaborada con chile de árbol, ajo y una mezcla de semillas y frutos secos tostados. Su sabor intenso y textura crujiente aportan un toque picante y gourmet a cualquier platillo. Perfecta para acompañar carnes, tacos, mariscos o simplemente disfrutar con pan y botanas.
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/salsaparamariscos.png" alt="Salsa Mariscos">
+            <div class="product-body">
+              <span class="tag">Sabor del Mar</span>
+              <h3>Salsa para Mariscos</h3>
+              <p class="price">$95 MXN</p>
+              <p class="description">Una salsa especialmente creada para realzar el sabor del mar. Su mezcla equilibrada de especias, ajo y cítricos aporta frescura y un toque picante suave que complementa perfectamente camarones, ostiones, pescados y ceviches. Ideal para quienes buscan un sabor auténtico y vibrante en cada bocado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/sazonadorparacarnes.png">
+            <div class="product-body">
+              <span class="tag">Para parrilladas y asados</span>
+              <h3>Sazonador para Carnes</h3>
+              <p class="price">$85 MXN</p>
+              <p class="description">Una mezcla robusta de especias seleccionadas para realzar el sabor de todo tipo de carnes. Combina notas de ajo, chile y hierbas aromáticas que aportan un toque picante y ahumado, ideal para asados, parrilladas o guisos. Su textura crujiente y aroma intenso garantizan una experiencia culinaria irresistible.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/sazonadormangoconchileahumado.png" alt="Sazonador ahumado">
+            <div class="product-body">
+              <span class="tag">Explosión de sabores</span>
+              <h3>Sazonador de Mango con Chile Ahumado</h3>
+              <p class="price">$90 MXN</p>
+              <p class="description">Una mezcla única que combina la dulzura natural del mango con el toque profundo y ahumado del chile. Elaborado con ingredientes seleccionados, este sazonador aporta un equilibrio perfecto entre sabor frutal y picante suave. Ideal para realzar frutas, botanas, mariscos y carnes con un perfil moderno y sofisticado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/polvopicanteparafrutas.png" alt="Polvo frutos.">
+            <div class="product-body">
+              <span class="tag">Alternativa deliciosa</span>
+              <h3>Polvo Picante para Frutas</h3>
+              <p class="price">$70 MXN</p>
+              <p class="description">Una mezcla artesanal que combina el picor del chile con el toque ácido del tamarindo y la frescura del limón. Su textura fina y sabor equilibrado realzan el dulzor natural de las frutas, creando una experiencia vibrante y deliciosa. Ideal para mango, piña, sandía y otras frutas tropicales.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/salsacremosachipotle.png" alt="Tarjetas elegantes decoradas con flores secas y lavanda.">
+            <div class="product-body">
+              <span class="tag">Más Vendida</span>
+              <h3>Salsa cremosa de chipotle</h3>
+              <p class="price">$95 MXN</p>
+              <p class="description">Una salsa suave y elegante que combina el sabor ahumado del chipotle con una textura cremosa irresistible. Elaborada con ingredientes seleccionados, ofrece un equilibrio perfecto entre picor y suavidad, ideal para acompañar carnes, hamburguesas, papas o mariscos. Su perfil gourmet la convierte en un toque distintivo para cualquier platillo.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+
+ <article class="product-card reveal">
+            <img src="img/salsaparamarinarpollo.png" alt="Sazonador ahumado">
+            <div class="product-body">
+              <span class="tag">Favorito de los Chefs</span>
+              <h3>Salsa Para Marinar Pollo</h3>
+              <p class="price">$95 MXN</p>
+              <p class="description">Una mezcla artesanal de chiles, ajo y especias frescas que realza el sabor natural del pollo. Su textura equilibrada y aroma intenso la convierten en el aliado perfecto para lograr marinados jugosos y llenos de carácter. Ideal para parrilladas, asados o recetas gourmet.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="img/sazonadorbotanaschile-limón.png"alt="sazonador chile-limon">
+            <div class="product-body">
+             <span class="tag">Sin necesidad de limón</span>
+              <h3>Sazonador para Botanas sabor Chile-Limón</h3>
+              <p class="price">$75MXN</p>
+              <p class="description">Una explosión de sabor picante y cítrico que transforma cualquier botana en una experiencia irresistible. Elaborado con chiles seleccionados y un toque de limón natural, este sazonador realza frutas, papas fritas y snacks con el equilibrio perfecto entre acidez y picor.
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+             <img src="img/sazonadores.jpeg" alt="sazonador original">
+             <div class="product-body">
+              <span class="tag">Sabor Original</span>
+              <h3>Sazonador Original</h3>
+              <p class="price">$70 MXN</p>
+              <p class="description"> La base de sabor que define tu línea gourmet. Este sazonador combina especias naturales cuidadosamente seleccionadas para realzar cualquier platillo, desde carnes y verduras hasta botanas. Su perfil equilibrado y aroma intenso lo convierten en el toque esencial para una cocina auténtica y versátil.
+    </p>
+    <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+  </div>
+</article>
+
+
+        </div>
+      </div>
+    </section>
+
+<!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué elegirnos?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Ingredientes de primera calidad</h3>
+            <p>Seleccionamos chiles, especias y frutos secos premium para lograr sabores auténticos y gourmet..</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="chef-hat"></i></div>
+            <h3>Sabor artesanal  </h3>
+            <p>Cada salsa y sazonador se prepara con dedicación, siguiendo procesos artesanales que respetan la tradición mexicana e internacional.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="truck"></i></div>
+            <h3>Envíos a todo México</h3>
+            <p>Recibe tus productos gourmet directamente en tu casa, frescos y bien empacados.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Compra fácil y rápida  </h3>
+            <p>Explora nuestros sabores, elige tus favoritos y ordénalos por WhatsApp en segundos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta para neuvos consumidores</span>
+          <h2>10% de descuento en tu primera compra</h2>
+          <p>Prueba nuestras salsas y sazonadores artesanales y descubre el sabor auténtico de México. Usa tu código de bienvenida y disfruta tu primer pedido con descuento.</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">DELI10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código DELI10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Momentos exquisitos</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/6838615/pexels-photo-6838615.jpeg" alt="Foto Fer.">
+                  <div>
+                    <p class="name">Fernando G. de Colima</p>
+                    <p class="occasion">Salsa para mariscos</p>
+                  </div>
+                </div>
+                <p class="quote">"La salsa para mariscos tiene un sabor fresco y delicioso. Perfecta para mis camarones."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/32593263/pexels-photo-32593263.jpeg" alt="Foto David.">
+                  <div>
+                    <p class="name">David R. de Quintana Roo</p>
+                    <p class="occasion">Sazonador para Carnes</p>
+                  </div>
+                </div>
+                <p class="quote">"El sazonador para carnes elevó por completo mi parrillada. Aroma y sabor increíbles."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/28386407/pexels-photo-28386407.jpeg" alt="Foto Lucía.">
+                  <div>
+                    <p class="name">Lucía A. de CDMX</p>
+                    <p class="occasion">Salsa de Chile de Árbol Original</p>
+                  </div>
+                </div>
+                <p class="quote">"La salsa original está espectacular. Picante, crujiente y con un toque gourmet que me encantó."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Estamos para servirte</p>
+          <h2>Hablemos de tu próximo sabor inolvidable</h2>
+          <p class="lead">Cuéntanos qué salsa o sazonador te gustaría probar y te ayudamos a hacer el pedido ideal para tus platillos.</p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Escribir a Deli-Salzonadores.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://www.instagram.com/marcandre6204?igsi=Y2QxMWloZ3FuY3o0" target="_blank" rel="noopener noreferrer">@deli-salzonadores</a></li>
+            <li><i data-lucide="message-circle-more"></i> <a href="https://wa.me/5215632065877" target="_blank" rel="noopener noreferrer">@deli-salzonadores</a></li>
+            <li><i data-lucide="music-2"></i> <a href="https://www.tiktok.com/@mastergenius61?_r=1&_t=ZS-99RQmZD2eKl">@deli-salzonadores</a></li>
+            <li><i data-lucide="calendar-clock"></i> Lunes a sábado, 10:00 a 19:00</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+</main>
+
+ <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Deli-Salzonadores</p>
+      <p class="love">Todos los derechos reservados &copy; 2026 Deli-Salzonadores</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+   <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/salsa.jpeg"> 
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-caja-title">Salza de chile de árbol y frutos secos</h2>
+        <p class="price">$150 MXN</p>
+        <p>Una salsa artesanal elaborada con chile de árbol, ajo y una mezcla de semillas y frutos secos tostados. Su sabor intenso y textura crujiente aportan un toque picante y gourmet a cualquier platillo. Perfecta para acompañar carnes, tacos, mariscos o simplemente disfrutar con pan y botanas.</p>
+        
+        
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Caja Abrazo. ¿Me ayudan a personalizarla?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/salsaparamariscos.png" alt="Salsa Mariscos">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-vela-title">Salsa para Mariscos</h2>
+        <p class="price">$95 MXN</p>
+        <p>Una salsa especialmente creada para realzar el sabor del mar. Su mezcla equilibrada de especias, ajo y cítricos aporta frescura y un toque picante suave que complementa perfectamente camarones, ostiones, pescados y ceviches. Ideal para quienes buscan un sabor auténtico y vibrante en cada bocado.</p>
+    
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Vela Momento. ¿Qué aromas tienen disponibles?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/sazonadorparacarnes.png" alt="Sazonador Carnes">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">Sazonador para Carnes</h2>
+        <p class="price">$85 MXN</p>
+        <p>Una mezcla robusta de especias seleccionadas para realzar el sabor de todo tipo de carnes. Combina notas de ajo, chile y hierbas aromáticas que aportan un toque picante y ahumado, ideal para asados, parrilladas o guisos. Su textura crujiente y aroma intenso garantizan una experiencia culinaria irresistible.</p>
+        
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir una Taza Personalizada. Tengo una frase en mente.')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="https://images.pexels.com/photos/2337804/pexels-photo-2337804.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Suculentas envueltas en tela rústica para regalo.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-jardin-title">Mini Jardín</h2>
+        <p class="price">$279 MXN</p>
+        <p>Un detalle vivo que alegra cualquier escritorio, rincón favorito o celebración especial.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Maceta decorada</li>
+          <li>Tarjeta especial</li>
+          <li>Selección de planta</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Mini Jardín. ¿Qué opciones de maceta tienen?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="https://images.pexels.com/photos/7487417/pexels-photo-7487417.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Regalos coloridos y postres para celebrar un cumpleaños.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-kit-title">Kit Cumpleaños</h2>
+        <p class="price">$429 MXN</p>
+        <p>Una celebración lista para sorprender, con dulzura, color y pequeños elementos que se sienten personales.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Mensaje de cumpleaños</li>
+          <li>Paleta de colores</li>
+          <li>Selección de dulces</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Kit Cumpleaños. ¿Me comparten opciones?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="https://images.pexels.com/photos/32589610/pexels-photo-32589610.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Tarjetas artesanales con flores secas y lavanda.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">Tarjeta con Flores</h2>
+        <p class="price">$159 MXN</p>
+        <p>Un mensaje escrito con intención, acompañado por flores secas que conservan el encanto de ese momento.</p>
+        <h3>Personalízala con:</h3>
+        <ul>
+          <li>Mensaje escrito a mano</li>
+          <li>Flores a elección</li>
+          <li>Color de tarjeta</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir una Tarjeta con Flores. ¿Puedo incluir un mensaje?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+
+</html>
